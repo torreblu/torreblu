@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos / Catálogos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="recursos-page">
+
+    <header class="topnav">
+    <div class="nav-container">
+        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> <ul id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
+            <li><a href="clientes.html">Nuestros clientes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="capacitacion.html">Capacitación</a></li>
+        </ul>
+    </div>
+</header>
+
+    <section class="hero">
+        <div class="wrap">
+            <h1>Catálogos y Recursos</h1>
+            <p>Seleccione un documento para visualizarlo o descargarlo.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2 class="section-title">Documentos Disponibles</h2>
+            <div class="cards-section">
+                <div class="cards">
+                    
+                    <div class="card">
+                        <h3>NEO ELITECH</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/ECS-961-NEO ELITECH.pdf')">Ver</button>
+                            <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Catálogo 2</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo2.pdf')">Ver</button>
+                            <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Catálogo 3</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo3.pdf')">Ver</button>
+                            <a href="assets/docs/catalogo3.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Catálogo 4</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo4.pdf')">Ver</button>
+                            <a href="assets/docs/catalogo4.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Catálogo 5</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo5.pdf')">Ver</button>
+                            <a href="assets/docs/catalogo5.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Catálogo 6</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <div class="card-buttons">
+                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo6.pdf')">Ver</button>
+                            <a href="assets/docs/catalogo6.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pdf-section">
+        <div class="wrap">
+            <h2 class="section-title">Vista Previa del Documento</h2>
+            
+            <div class="pdf-window">
+                <div class="pdf-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="pdf-title">Visor de Documentos</span>
+                </div>
+                <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf"></iframe>
+            </div>
+            
+            <p style="text-align:center; margin-top:15px; font-size:0.9rem; color:#666;">
+                El visor de PDF se actualiza al hacer clic en "Ver". ¿Necesitas guardarlo? Descárgalo directamente desde el botón.
+            </p>
+        </div>
+    </section>
+    <footer>
+        © <span id="year"></span> TORREBLU – Todos los derechos reservados
+    </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
+
