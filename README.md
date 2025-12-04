@@ -1,16 +1,50 @@
-## Hi there 👋
+# torreblu
+TorreBlu
+Torreblu — Servicios de Ingeniería Eléctrica
 
-<!--
-**torreblu/torreblu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sitio web diseñado para presentar los servicios profesionales incluyendo portafolio, soluciones técnicas, galería de proyectos y métodos de contacto.
 
-Here are some ideas to get you started:
+Este repositorio contiene el código fuente del sitio web alojado mediante GitHub Pages.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔧 Servicios Destacados
+
+Instalaciones eléctricas residenciales y comerciales
+
+Diseño y construcción de tableros eléctricos
+
+Sistemas de automatización y control
+
+Mantenimiento preventivo y correctivo
+
+Consultoría y levantamientos eléctricos
+
+Proyectos personalizados según necesidad del cliente
+
+🌐 Sitio Web
+
+El sitio está disponible en:
+https://www.torreblu.com
+
+📁 Estructura del Proyecto
+
+index.html → Página principal
+
+assets/ → Imágenes y recursos visuales
+
+styles/ → Hojas de estilo
+
+scripts/ → Funciones y comportamiento del sitio
+
+CNAME → Configuración para dominio personalizado
+
+🚀 Despliegue
+
+
+
+📞 Contacto
+📧 Correo: 
+gerencia@torreblu.com
+ventas@torreblu.com
+servicios@torreblu.com
+📱 Teléfono: +593 9 888 47802
+📍 Servicios en Ecuador
