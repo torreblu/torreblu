@@ -62,7 +62,7 @@ section p {
     justify-content: center; /* centrado en escritorio */
 }
 
-/* Botón hamburguesa (solo móvil) */
+/* Botón hamburguesa (solo en dispositivos móviles) */
 .nav-toggle {
     display: none;
     margin-right: 15px;
@@ -150,6 +150,7 @@ section.hero {
 }
 
 /* Logo translúcido de fondo */
+/* acá hay que ir jugando con la opacidad */
 section.hero::before {
     content: "";
     position: absolute;
@@ -158,7 +159,7 @@ section.hero::before {
     width: 80%;
     height: 80%;
     transform: translate(-50%, -50%);
-    background: url('assets/images/logo.jpeg') no-repeat center center;
+    background: url('assets/images/logo.jpeg') no-repeat center center; /* ruta del logo  */
     background-size: contain;
     opacity: 0.35;
     filter: blur(1px);
