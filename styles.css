@@ -215,6 +215,31 @@ div.service-card p {
     margin-bottom: 8px;
 }
 
+
+.contact-item a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #0059b3, #0072e5);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+    background: linear-gradient(90deg, #003366, #0059b3);
+}
+
+
+
+
+
+
+
+
+
 /* ===================================================
    FOOTER
 =================================================== */
@@ -226,3 +251,7 @@ footer {
     color: #fff;
     margin-top: 40px;
 }
+
+
+
+
