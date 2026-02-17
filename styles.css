@@ -176,22 +176,6 @@ section.hero p {
     color: #004080;
 }
 
-@media (max-width: 1024px) {
-    section.hero h1 { font-size: 2.4rem; }
-    section.hero p { font-size: 1.1rem; }
-}
-
-@media (max-width: 768px) {
-    section.hero { padding: 80px 15px 60px 15px; }
-    section.hero h1 { font-size: 2rem; }
-    section.hero p { font-size: 1rem; }
-}
-
-@media (max-width: 480px) {
-    section.hero h1 { font-size: 1.6rem; }
-    section.hero p { font-size: 0.95rem; }
-}
-
 /* ===================================================
    BOTONES
 =================================================== */
@@ -225,17 +209,6 @@ button.btn-service:hover {
     transform: translateY(-2px);
 }
 
-a.btn-secundario {
-    background: transparent;
-    color: #0059b3;
-    border: 1px solid #0059b3;
-}
-
-a.btn-secundario:hover {
-    background: #0059b3;
-    color: #fff;
-}
-
 /* ===================================================
    TARJETAS Y CUADRÍCULAS
 =================================================== */
@@ -255,16 +228,6 @@ div.service-card {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
-
-    display: flex;
-    flex-direction: column;
-}
-
-div.card p,
-div.service-card p {
-    font-size: 0.95rem;
-    color: #003366;
-    flex-grow: 1;
 }
 
 div.card:hover,
@@ -286,4 +249,35 @@ div.service-card h3 {
     font-size: 1.2rem;
     color: #001f3f;
     margin-bottom: 10px;
+}
+
+div.card p,
+div.service-card p {
+    font-size: 0.95rem;
+    color: #003366;
+}
+
+/* ===================================================
+   SOLO SERVICIOS (alineación de botones)
+=================================================== */
+
+.services-section .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-section .card p {
+    flex-grow: 1;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    margin-top: 40px;
 }
