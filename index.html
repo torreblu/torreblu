@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- analítica para el Home-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5B8XE8KJX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -19,134 +18,206 @@
 
 <body>
 
-<audio id="musica" autoplay loop muted>
-    <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
-</audio>
+    <audio id="musica" autoplay loop muted>
+        <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
+    </audio>
 
-<header class="topnav">
-    <div class="nav-container">
-        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> 
-        <ul id="nav-links">
-            <li><a href="index.html" class="active">Inicio</a></li> 
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
-            <li><a href="clientes.html">Nuestros clientes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="capacitacion.html">Capacitación</a></li>
-        </ul>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="wrap">
-        <h1>La energía de tu empresa, en un solo lugar</h1>
-        <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
-        <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
-    </div>
-</section>
-
-<!-- ============================= -->
-<!-- CARRUSEL DE PRODUCTOS NUEVO -->
-<!-- ============================= -->
-<section class="carousel-section">
-    <div class="wrap">
-        <h2 class="section-title">Nuestros Productos Destacados</h2>
-
-        <div class="carousel-container">
-            <button class="carousel-btn prev" id="carousel-prev">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-            <div class="carousel-track" id="carousel-track">
-                <!-- Se cargan automáticamente desde productos.html -->
-            </div>
-
-            <button class="carousel-btn next" id="carousel-next">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
+    <header class="topnav">
+        <div class="nav-container">
+            <a href="#" class="nav-toggle" id="nav-toggle">☰</a> 
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li> 
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
+                <li><a href="clientes.html">Nuestros clientes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="capacitacion.html">Capacitación</a></li>
+            </ul>
         </div>
+    </header>
 
-        <div style="text-align:center;">
-            <a href="productos.html" class="btn-service">Ver todos los productos</a>
+    <section class="hero">
+        <div class="wrap">
+            <h1>La energía de tu empresa, en un solo lugar</h1>
+            <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
+            <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
         </div>
+    </section>
 
-    </div>
-</section>
-<!-- ============================= -->
-<!-- FIN CARRUSEL -->
-<!-- ============================= -->
+    <section class="carousel-section">
+        <div class="wrap">
+            <h2 class="section-title">Nuestros Productos Destacados</h2>
 
-<section class="services-section">
-    <div class="wrap"> 
-        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
-        <div class="cards"> 
-            <div class="card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Insumos Eléctricos</h3>
-                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                <a href="productos.html" class="btn-service">Explorar</a>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="carousel-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-track" id="carousel-track">
+                    </div>
+
+                <button class="carousel-btn next" id="carousel-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="card">
-                <i class="fa-solid fa-wrench"></i>
-                <h3>Instalaciones y Proformas</h3>
-                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
-                <a href="servicios.html" class="btn-service">Solicitar</a>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-robot"></i>
-                <h3>Proyectos y Automatización</h3>
-                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
-                <a href="servicios.html" class="btn-service">Conocer Más</a>
+
+            <div style="text-align:center;">
+                <a href="productos.html" class="btn-service">Ver todos los productos</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="services-section">
+        <div class="wrap"> 
+            <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+            <div class="cards"> 
+                <div class="card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Insumos Eléctricos</h3>
+                    <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                    <a href="galeria.html" class="btn-service">Explorar</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-wrench"></i>
+                    <h3>Instalaciones y Proformas</h3>
+                    <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                    <a href="servicios.html" class="btn-service">Solicitar</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>Proyectos y Automatización</h3>
+                    <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                    <a href="servicios.html" class="btn-service">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="wrap">
+            <h2 class="section-title">Vídeo institucional</h2>
 
-<footer>
-    © <span id="year"></span> TORREBLU – Todos los derechos reservados
-</footer>
+            <div class="cards">
+                <div class="card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/HwElGGq-muw"
+                                title="Introducción Proyectos y servicios Torre Blu"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Introducción Proyectos y servicios Torre Blu</h3>
+                    <p>Somos una empresa ecuatoriana dedicada a la venta de insumos y soluciones eléctricas para los sectores residencial y agroindustrial de la provincia de Los Ríos y sus alrededores, con una clara visión de expansión a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+    <section class="cards-section">
+        <div class="wrap">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
+                    <h3>Instalaciones Eléctricas</h3>
+                    <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-clipboard-check fa-2x"></i>
+                    <h3>Proformas y Evaluaciones</h3>
+                    <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-microchip fa-2x"></i>
+                    <h3>Automatización y Control</h3>
+                    <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-lightbulb fa-2x"></i>
+                    <h3>Iluminación</h3>
+                    <p>Optimización de iluminación para ahorro energético y seguridad.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    fetch("productos.html")
-        .then(response => response.text())
-        .then(data => {
+    <section>
+        <div class="wrap">
+            <h2 class="section-title">Documentos Disponibles</h2>
+            <div class="cards-section">
+                <div class="cards">
+                    <div class="card">
+                        <h3>NEO ELITECH</h3>
+                        <p>Manual de usuario.</p>
+                        <div class="card-buttons" style="text-align:center;">
+                            <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
 
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data, "text/html");
+                    <div class="card">
+                        <h3>JAGO Electrical Group</h3>
+                        <p>Catálogo de productos.</p>
+                        <div class="card-buttons" style="text-align:center;">
+                            <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Ajusta esta clase si en productos.html usas otra
-            const productos = doc.querySelectorAll(".producto");
+    <section>
+        <div class="wrap">
+            <div class="cards">
+                <div class="card-buttons" style="display:flex; justify-content:center;">
+                    <a href="recursos.html" class="btn-service">Ver más catálogos</a>
+                </div>    
+            </div>
+        </div>
+    </section>		
 
-            const track = document.getElementById("carousel-track");
-            track.innerHTML = "";
+    <section class="cards-section">
+        <div class="wrap">
+            <h2 class="section-title">Proyectos Recientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos del AGD">
+                    <h3>Análisis de datos del AGD</h3>
+                    <p>Analizamos los resultados de gases disueltos en el aceite de los transformadores con técnicas avanzadas.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
+                    <h3>Cuarto de inversores</h3>
+                    <p>Realizamos proyectos de generación fotovoltaica.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
+                    <h3>Tableros de fuerza</h3>
+                    <p>Desarrollamos tableros de fuerza para el sector de energía y agroindustrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            productos.forEach(producto => {
-                const img = producto.querySelector("img");
-                if (img) {
-                    const item = document.createElement("div");
-                    item.className = "carousel-item";
+    <section>
+        <div class="wrap">
+            <div class="cards">
+                <div class="card-buttons" style="display:flex; justify-content:center;">
+                    <a href="galeria.html" class="btn-service">Ver más proyectos realizados</a>
+                </div>    
+            </div>
+        </div>
+    </section>		
 
-                    const newImg = document.createElement("img");
-                    newImg.src = img.getAttribute("src");
-                    newImg.alt = img.getAttribute("alt");
+    <footer>
+        © <span id="year"></span> TORREBLU – Todos los derechos reservados
+    </footer>
 
-                    item.appendChild(newImg);
-                    track.appendChild(item);
-                }
-            });
-
-        })
-        .catch(error => {
-            console.error("Error cargando productos:", error);
-        });
-
-});
-</script>
-
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
