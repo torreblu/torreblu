@@ -1,11 +1,13 @@
-<html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORREBLU | Inicio</title>
-    <link rel="stylesheet" href="styles.css?v=1.3">
+    <link rel="stylesheet" href="styles.css?v=1.5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Q5B8XE8KJX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5B8XE8KJX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -16,7 +18,7 @@
 
 <body>
 
-    <audio id="musica" autoplay="" loop="" muted="">
+    <audio id="musica" autoplay loop muted>
         <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
     </audio>
 
@@ -47,24 +49,23 @@
     <section class="carousel-section">
         <div class="wrap">
             <h2 class="section-title">Nuestros Productos Destacados</h2>
-
             <div class="carousel-container">
                 <button class="carousel-btn prev" id="carousel-prev">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <div class="carousel-track" id="carousel-track"><div class="carousel-item"><img src="assets/images/categorias/catBaterias.jpeg" alt="Baterías"></div><div class="carousel-item"><img src="assets/images/categorias/catCables.jpeg" alt="Cables"></div><div class="carousel-item"><img src="assets/images/categorias/catElectronica.jpeg" alt="Electrónica"></div><div class="carousel-item"><img src="assets/images/categorias/catFerreteria.jpeg" alt="Ferretería"></div><div class="carousel-item"><img src="assets/images/categorias/catHerramientas.jpeg" alt="Herramientas"></div><div class="carousel-item"><img src="assets/images/categorias/catIluminacion.jpeg" alt="Iluminación"></div><div class="carousel-item"><img src="assets/images/categorias/catIndustrial.jpeg" alt="Industrial"></div><div class="carousel-item"><img src="assets/images/categorias/catMediatension.jpeg" alt="Media tensión"></div><div class="carousel-item"><img src="assets/images/categorias/catMotores.jpeg" alt="Motores"></div><div class="carousel-item"><img src="assets/images/categorias/catResidencial.jpeg" alt="Residencial"></div><div class="carousel-item"><img src="assets/images/categorias/catVehiculoselectricos.jpeg" alt="Vehículos eléctricos"></div></div>
+                <div class="carousel-track" id="carousel-track"></div>
 
                 <button class="carousel-btn next" id="carousel-next">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
-
             <div style="text-align:center;">
                 <a href="productos.html" class="btn-service">Ver todos los productos</a>
             </div>
         </div>
     </section>
+
     <section class="services-section">
         <div class="wrap"> 
             <h2 class="section-title">Nuestros Pilares de Servicio</h2>
@@ -73,7 +74,7 @@
                     <i class="fa-solid fa-bolt"></i>
                     <h3>Insumos Eléctricos</h3>
                     <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                    <a href="galeria.html" class="btn-service">Explorar</a>
+                    <a href="productos.html" class="btn-service">Explorar</a>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-wrench"></i>
@@ -90,19 +91,17 @@
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="wrap">
             <h2 class="section-title">Vídeo institucional</h2>
-
             <div class="cards">
                 <div class="card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/HwElGGq-muw" title="Introducción Proyectos y servicios Torre Blu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-                        </iframe>
+                        <iframe src="https://www.youtube.com/embed/HwElGGq-muw" title="Introducción Proyectos y servicios Torre Blu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <h3>Introducción Proyectos y servicios Torre Blu</h3>
-                    <p>Somos una empresa ecuatoriana dedicada a la venta de insumos y soluciones eléctricas para los sectores residencial y agroindustrial de la provincia de Los Ríos y sus alrededores, con una clara visión de expansión a nivel nacional.</p>
+                    <p>Somos una empresa ecuatoriana dedicada a la venta de insumos y soluciones eléctricas para los sectores residencial y agroindustrial de la provincia de Los Ríos y sus alrededores.</p>
                 </div>
             </div>
         </div>
@@ -110,31 +109,31 @@
 
     <section class="cards-section">
         <div class="wrap">
-            <h2 class="section-title">Nuestros Servicios</h2>
+            <h2 class="section-title">Nuestros Servicios Detallados</h2>
             <div class="cards">
                 <div class="card">
                     <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
                     <h3>Instalaciones Eléctricas</h3>
                     <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar este servicio</a>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar</a>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-clipboard-check fa-2x"></i>
                     <h3>Proformas y Evaluaciones</h3>
                     <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar</a>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-microchip fa-2x"></i>
                     <h3>Automatización y Control</h3>
                     <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar este servicio</a>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar</a>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-lightbulb fa-2x"></i>
                     <h3>Iluminación</h3>
                     <p>Optimización de iluminación para ahorro energético y seguridad.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar este servicio</a>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar</a>
                 </div>
             </div>
         </div>
@@ -143,78 +142,56 @@
     <section>
         <div class="wrap">
             <h2 class="section-title">Documentos Disponibles</h2>
-            <div class="cards-section">
-                <div class="cards">
-                    <div class="card">
-                        <h3>NEO ELITECH</h3>
-                        <p>Manual de usuario.</p>
-                        <div class="card-buttons" style="text-align:center;">
-                            <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download="">Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>JAGO Electrical Group</h3>
-                        <p>Catálogo de productos.</p>
-                        <div class="card-buttons" style="text-align:center;">
-                            <a href="assets/docs/catalogo2.pdf" class="btn-service" download="">Descargar</a>
-                        </div>
-                    </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>NEO ELITECH</h3>
+                    <p>Manual de usuario.</p>
+                    <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
                 </div>
+                <div class="card">
+                    <h3>JAGO Electrical Group</h3>
+                    <p>Catálogo de productos.</p>
+                    <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:20px;">
+                <a href="recursos.html" class="btn-service">Ver más catálogos</a>
             </div>
         </div>
     </section>
-
-    <section>
-        <div class="wrap">
-            <div class="cards">
-                <div class="card-buttons" style="display:flex; justify-content:center;">
-                    <a href="recursos.html" class="btn-service">Ver más catálogos</a>
-                </div>    
-            </div>
-        </div>
-    </section>		
 
     <section class="cards-section">
         <div class="wrap">
             <h2 class="section-title">Proyectos Recientes</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos del AGD">
+                    <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos">
                     <h3>Análisis de datos del AGD</h3>
-                    <p>Analizamos los resultados de gases disueltos en el aceite de los transformadores con técnicas avanzadas.</p>
+                    <p>Técnicas avanzadas para gases disueltos en transformadores.</p>
                 </div>
                 <div class="card">
                     <img src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
                     <h3>Cuarto de inversores</h3>
-                    <p>Realizamos proyectos de generación fotovoltaica.</p>
+                    <p>Proyectos de generación fotovoltaica eficientes.</p>
                 </div>
                 <div class="card">
                     <img src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
                     <h3>Tableros de fuerza</h3>
-                    <p>Desarrollamos tableros de fuerza para el sector de energía y agroindustrial.</p>
+                    <p>Sistemas para el sector energía y agroindustrial.</p>
                 </div>
+            </div>
+            <div style="text-align:center; margin-top:20px;">
+                <a href="servicios.html" class="btn-service">Ver más proyectos</a>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="wrap">
-            <div class="cards">
-                <div class="card-buttons" style="display:flex; justify-content:center;">
-                    <a href="servicios.html" class="btn-service">Ver más proyectos realizados</a>
-                </div>    
-            </div>
-        </div>
-    </section>		
-
     <footer>
-        © <span id="year">2026</span> TORREBLU – Todos los derechos reservados
+        <div class="wrap">
+            © <span id="year"></span> TORREBLU – Todos los derechos reservados
+        </div>
     </footer>
 
-    <script src="main.js?v=1.3"></script>
-
-
-</body></html>
-
-
+    <script src="main.js?v=1.5"></script>
+</body>
+</html>
