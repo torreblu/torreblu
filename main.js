@@ -1,100 +1,105 @@
 /* ===================================================
-   MAIN.JS - SCRIPT GENERAL DEL SITIO TORREBLU
+   MAIN.JS - TORREBLU (VERSIÓN MEJORADA)
 =================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. ACTUALIZACIÓN DEL AÑO EN EL FOOTER
+    // 1. FOOTER - AÑO ACTUAL
     const yearElem = document.getElementById("year");
-    if (yearElem) {
-        yearElem.textContent = new Date().getFullYear();
-    }
+    if (yearElem) yearElem.textContent = new Date().getFullYear();
 
-    // 2. LÓGICA DE NAVEGACIÓN ACTIVA (Resaltar página actual)
-    let currentPage = location.pathname.split("/").pop();
-    if (!currentPage || currentPage === "/") {
-        currentPage = "index.html";
-    }
-
+    // 2. MENÚ ACTIVO Y HAMBURGUESA
+    let currentPage = location.pathname.split("/").pop() || "index.html";
     const links = document.querySelectorAll(".topnav a");
+    
     links.forEach(link => {
-        const href = link.getAttribute("href");
-        if (href === currentPage) {
-            link.classList.add("active");
-        }
+        if (link.getAttribute("href") === currentPage) link.classList.add("active");
     });
 
-    // 3. MENÚ HAMBURGUESA (Mobile)
     const hamburger = document.getElementById("nav-toggle");
     const navMenu = document.querySelector(".topnav ul");
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener("click", (event) => {
-            event.preventDefault();
+        hamburger.addEventListener("click", (e) => {
+            e.preventDefault();
             navMenu.classList.toggle("active");
         });
     }
 
-    // 4. CARRUSEL DINÁMICO: CARGA DE PRODUCTOS DESDE productos.html
+    // 3. LOGICA DEL CARRUSEL DINÁMICO
     const track = document.getElementById("carousel-track");
     const prevBtn = document.getElementById("carousel-prev");
     const nextBtn = document.getElementById("carousel-next");
 
     if (track) {
-        // Fetch para leer el archivo productos.html
+        // Cargar productos desde productos.html
         fetch("productos.html")
-            .then(response => {
-                if (!response.ok) throw new Error("No se pudo cargar productos.html");
-                return response.text();
-            })
-            .then(htmlString => {
+            .then(res => res.text())
+            .then(html => {
                 const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlString, "text/html");
-                // Buscamos todas las tarjetas de producto en el archivo externo
-                const productosOriginales = doc.querySelectorAll(".card.producto");
+                const doc = parser.parseFromString(html, "text/html");
+                const productos = doc.querySelectorAll(".card.producto");
 
-                if (productosOriginales.length === 0) {
-                    console.warn("No se encontraron productos con la clase .card.producto");
-                    return;
-                }
+                track.innerHTML = ""; // Limpiar
 
-                // Limpiamos el track por si acaso
-                track.innerHTML = "";
-
-                // Creamos los items del carrusel (solo imagen)
-                productosOriginales.forEach(prod => {
+                productos.forEach(prod => {
                     const imgOriginal = prod.querySelector("img");
-                    
                     if (imgOriginal) {
-                        const carouselItem = document.createElement("div");
-                        carouselItem.className = "carousel-item";
-
-                        const newImg = document.createElement("img");
-                        newImg.src = imgOriginal.getAttribute("src");
-                        newImg.alt = imgOriginal.getAttribute("alt") || "Producto TorreBlu";
-
-                        carouselItem.appendChild(newImg);
-                        track.appendChild(carouselItem);
+                        const item = document.createElement("div");
+                        item.className = "carousel-item";
+                        const img = document.createElement("img");
+                        img.src = imgOriginal.src;
+                        img.alt = imgOriginal.alt;
+                        item.appendChild(img);
+                        track.appendChild(item);
                     }
                 });
+
+                // Una vez cargados, activar Autoplay
+                initCarouselLogic();
             })
-            .catch(err => {
-                console.error("Error al alimentar el carrusel:", err);
-                track.innerHTML = "<p>Error al cargar productos destacados.</p>";
-            });
+            .catch(err => console.error("Error al cargar carrusel:", err));
     }
 
-    // 5. CONTROLES DE DESPLAZAMIENTO DEL CARRUSEL
-    if (track && prevBtn && nextBtn) {
-        const scrollStep = 300; // Ajustado al min-width de carousel-item + margin
+    function initCarouselLogic() {
+        if (!track || !prevBtn || !nextBtn) return;
 
+        const scrollStep = 325; // Ancho item + gap
+        let autoPlayInterval;
+
+        // Función para mover al siguiente
+        const moveNext = () => {
+            if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
+                track.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                track.scrollBy({ left: scrollStep, behavior: "smooth" });
+            }
+        };
+
+        // Iniciar Autoplay
+        const startAutoPlay = () => {
+            autoPlayInterval = setInterval(moveNext, 4000);
+        };
+
+        const stopAutoPlay = () => clearInterval(autoPlayInterval);
+
+        // Eventos de botones
         nextBtn.addEventListener("click", () => {
-            track.scrollBy({ left: scrollStep, behavior: "smooth" });
+            stopAutoPlay();
+            moveNext();
+            startAutoPlay(); // Reiniciar el timer
         });
 
         prevBtn.addEventListener("click", () => {
+            stopAutoPlay();
             track.scrollBy({ left: -scrollStep, behavior: "smooth" });
+            startAutoPlay();
         });
-    }
 
+        // Pausar al pasar el ratón
+        track.addEventListener("mouseenter", stopAutoPlay);
+        track.addEventListener("mouseleave", startAutoPlay);
+
+        startAutoPlay();
+    }
 });
