@@ -1,727 +1,223 @@
-/* ===================================================
-   RESET Y ESTILOS BASE
-=================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f4f6f8;
-    color: #001f3f;
-}
-
-/* Contenedor general */
-.wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Espaciado general de las secciones */
-section {
-    padding: 60px 20px;
-}
-
-section h2,
-.section-title {
-    font-size: 2rem;
-    color: #001f3f;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-section p {
-    font-size: 1rem;
-    color: #003366;
-    text-align: center;
-}
-
-/* ===================================================
-   NAVEGACIÓN PRINCIPAL (TOP NAVBAR)
-=================================================== */
-
-.topnav {
-    width: 100%;
-    background-color: #003366;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.topnav .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centrado en escritorio */
-}
-
-/* Botón hamburguesa (solo en dispositivos móviles) */
-.nav-toggle {
-    display: none;
-    margin-right: 15px;
-    font-size: 1.4rem;
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Lista principal del menú */
-.topnav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.topnav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    padding: 6px 12px;
-    white-space: nowrap;
-}
-
-/* Estado hover y activo */
-.topnav ul li a:hover,
-.topnav ul li a.active {
-    color: #00aaff;
-}
-
-/* Navbar en pantallas pequeñas */
-@media (max-width: 768px) {
-    .topnav .nav-container {
-        justify-content: space-between;
-    }
-
-    .nav-toggle {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .topnav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-        display: none; /* oculto por defecto */
-    }
-
-    .topnav ul.active {
-        display: flex; /* visible cuando JS agrega .active */
-    }
-}
-
-@media (max-width: 480px) {
-    .topnav {
-        padding: 12px;
-    }
-
-    .topnav ul {
-        gap: 8px;
-    }
-
-    .topnav ul li a {
-        font-size: 0.9rem;
-        padding: 5px 10px;
-    }
-}
-
-/* ===================================================
-   SECCIÓN HERO (CABECERA PÁGINAS)
-=================================================== */
-
-section.hero {
-    position: relative;
-    padding: 100px 20px 80px 20px;
-    overflow: hidden;
-    background-color: #e0e8f5;
-    text-align: center;
-    margin-top: 70px; /* compensa navbar fija */
-}
-
-/* Logo translúcido de fondo */
-/* acá hay que ir jugando con la opacidad */
-section.hero::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%, -50%);
-    background: url('assets/images/logo.jpeg') no-repeat center center; /* ruta del logo  */
-    background-size: contain;
-    opacity: 0.35;
-    filter: blur(1px);
-    z-index: 0;
-}
-
-section.hero .wrap {
-    position: relative;
-    z-index: 1;
-}
-
-section.hero h1 {
-    font-size: 2.8rem;
-    color: #001f3f;
-    margin-bottom: 20px;
-}
-
-section.hero p {
-    font-size: 1.2rem;
-    color: #004080;
-}
-
-@media (max-width: 1024px) {
-    section.hero h1 {
-        font-size: 2.4rem;
-    }
-    section.hero p {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    section.hero {
-        padding: 80px 15px 60px 15px;
-    }
-    section.hero h1 {
-        font-size: 2rem;
-    }
-    section.hero p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    section.hero h1 {
-        font-size: 1.6rem;
-    }
-    section.hero p {
-        font-size: 0.95rem;
-    }
-}
-
-/* ===================================================
-   BOTONES GENERALES
-=================================================== */
-
-a.button,
-a.btn-service,
-button.btn-service,
-a.btn-secundario {
-    display: inline-block;
-    padding: 12px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-/* Botón principal (azul degradado) */
-a.button,
-a.btn-service,
-button.btn-service {
-    background: linear-gradient(90deg, #0059b3, #0072e5);
-    color: #fff;
-    border: none;
-}
-
-a.button:hover,
-a.btn-service:hover,
-button.btn-service:hover {
-    background: linear-gradient(90deg, #003366, #0059b3);
-    transform: translateY(-2px);
-}
-
-/* Botón secundario (borde azul) */
-a.btn-secundario {
-    background: transparent;
-    color: #0059b3;
-    border: 1px solid #0059b3;
-}
-
-a.btn-secundario:hover {
-    background: #0059b3;
-    color: #fff;
-}
-
-/* ===================================================
-   TARJETAS Y CUADRÍCULAS GENERALES
-=================================================== */
-
-div.cards,
-div.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-div.card,
-div.service-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-div.card:hover,
-div.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-div.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-div.card h3,
-div.service-card h3 {
-    font-size: 1.2rem;
-    color: #001f3f;
-    margin-bottom: 10px;
-}
-
-div.card p,
-div.service-card p {
-    font-size: 0.95rem;
-    color: #003366;
-}
-
-@media (max-width: 768px) {
-    div.cards,
-    div.card-grid {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    div.cards,
-    div.card-grid {
-        gap: 10px;
-    }
-}
-
-/* ===================================================
-   SERVICIOS (INDEX)
-=================================================== */
-
-.services-section .cards .card i {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #0059b3;
-}
-
-/* ===================================================
-   VALORES
-=================================================== */
-
-div.cards-section .card {
-    border-left: 4px solid #0072e5;
-    padding-left: 15px;
-    text-align: left;
-}
-
-/* ===================================================
-   GALERÍA (PROYECTOS)
-=================================================== */
-
-.cards-section .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.cards-section .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* ===================================================
-   MISIÓN, VISIÓN Y ESLOGAN
-=================================================== */
-
-.mission-vision-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.mission-vision-grid .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-/* ===================================================
-   CLIENTES
-=================================================== */
-
-.clients-section .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.clients-section .card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.clients-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.clients-section .card img {
-    max-width: 100%;
-    max-height: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.clients-section .card h3 {
-    font-size: 1.1rem;
-    color: #001f3f;
-    margin-bottom: 5px;
-}
-
-.clients-section .card p {
-    font-size: 0.9rem;
-    color: #003366;
-}
-
-@media (max-width: 1024px) {
-    .clients-section .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .clients-section .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .clients-section .cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===================================================
-   GRUPO DE BOTONES (sólo página RECURSOS)
-=================================================== */
-
-/* Layout de los botones en cada tarjeta (Ver / Descargar) */
-.recursos-page .card-buttons {
-    margin-top: auto;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-}
-
-/* Botón VER: más protagonista */
-.recursos-page .card-buttons button.btn-service {
-    flex-basis: 60%;
-    padding: 10px 12px;
-    font-size: 0.9rem;
-    background: linear-gradient(90deg, #0072e5, #00aaff);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-/* Botón DESCARGAR: secundario */
-.recursos-page .card-buttons a.btn-service {
-    flex-basis: 40%;
-    padding: 9px 10px;
-    font-size: 0.85rem;
-    background: #ffffff;
-    color: #0059b3;
-    border: 1px solid #0059b3;
-    box-shadow: none;
-}
-
-.recursos-page .card-buttons a.btn-service:hover {
-    background: #0059b3;
-    color: #ffffff;
-}
-
-/* ===================================================
-   CONTACTO: TARJETAS Y MAPA
-=================================================== */
-
-/* Tarjetas de teléfono / WhatsApp / correo */
-.contact-methods .contact-methods-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.contact-item {
-    background-color: #fff;
-    padding: 18px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.contact-item i {
-    margin-bottom: 10px;
-    color: #0059b3;
-}
-
-.contact-item h3 {
-    margin-bottom: 8px;
-}
-
-/* Sección del mapa */
-.map-section .map-container {
-    margin-top: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.map-section iframe {
-    width: 100%;
-    min-height: 350px;
-    border: 0;
-}
-
-/* Redes sociales: tarjetas más pequeñas y centradas */
-.social-cards .cards {
-    max-width: 700px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-
-.social-cards .card {
-    padding: 15px;
-    max-width: 220px;
-    margin: 0 auto;
-}
-
-.social-cards .card i {
-    margin-bottom: 8px;
-    color: #0059b3;
-    font-size: 1.7rem;
-}
-
-.social-cards .card h3 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 480px) {
-    .map-section iframe {
-        min-height: 280px;
-    }
-}
-
-/* ===================================================
-   RECURSOS / CATÁLOGOS: VISOR PDF
-=================================================== */
-
-body.recursos-page {
-    /* si quieres fondo distinto, lo pones aquí */
-}
-
-.pdf-section .pdf-window {
-    margin-top: 25px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    background: #f8f9fb;
-}
-
-/* Barra superior del "ventanal" de PDF */
-.pdf-header {
-    background: #2d3748;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.pdf-header .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.pdf-header .dot.red {
-    background: #ff5f57;
-}
-
-.pdf-header .dot.yellow {
-    background: #febc2e;
-}
-
-.pdf-header .dot.green {
-    background: #28c840;
-}
-
-.pdf-header .pdf-title {
-    margin-left: 10px;
-    font-size: 0.9rem;
-    color: #e2e8f0;
-}
-
-/* Visor de PDF: un poco más grande pero sin ocupar todo */
-.pdf-viewer {
-    width: 100%;
-    min-height: 600px;      /* más grande que antes */
-    max-height: 75vh;       /* nunca más del 75% de la altura de la ventana */
-    border: none;
-}
-
-/* ===================================================
-   PRODUCTOS
-=================================================== */
-
-body.productos-page {
-    /* estilos específicos si se requieren */
-}
-
-/* ===================================================
-   CAPACITACIÓN: VIDEOS EMBEBIDOS
-=================================================== */
-
-/* Wrapper para videos responsivos (16:9) */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    margin-bottom: 12px;
-    background: #000;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* ===================================================
-   CARRUSEL PRODUCTOS (INDEX)
-=================================================== */
-
-.carousel-section {
-    background: #ffffff;
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    min-width: 300px;
-    margin: 0 10px;
-    flex-shrink: 0;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #0059b3;
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-.carousel-btn:hover {
-    background: #003366;
-}
-
-.carousel-btn.prev {
-    left: 0;
-}
-
-.carousel-btn.next {
-    right: 0;
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        min-width: 250px;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* ===================================================
-   FOOTER
-=================================================== */
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003366;
-    color: #fff;
-    margin-top: 40px;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORREBLU | Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5B8XE8KJX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5B8XE8KJX');
+    </script>
+</head>
+
+<body>
+
+    <audio id="musica" autoplay loop muted>
+        <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
+    </audio>
+
+    <header class="topnav">
+        <div class="nav-container">
+            <a href="#" class="nav-toggle" id="nav-toggle">☰</a> 
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li> 
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
+                <li><a href="clientes.html">Nuestros clientes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="capacitacion.html">Capacitación</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap">
+            <h1>La energía de tu empresa, en un solo lugar</h1>
+            <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
+            <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="wrap">
+            <h2 class="section-title">Nuestros Productos Destacados</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="carousel-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-track" id="carousel-track">
+                    </div>
+
+                <button class="carousel-btn next" id="carousel-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div style="text-align:center;">
+                <a href="productos.html" class="btn-service">Ver todos los productos</a>
+            </div>
+        </div>
+    </section>
+    <section class="services-section">
+        <div class="wrap"> 
+            <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+            <div class="cards"> 
+                <div class="card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Insumos Eléctricos</h3>
+                    <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                    <a href="galeria.html" class="btn-service">Explorar</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-wrench"></i>
+                    <h3>Instalaciones y Proformas</h3>
+                    <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                    <a href="servicios.html" class="btn-service">Solicitar</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>Proyectos y Automatización</h3>
+                    <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                    <a href="servicios.html" class="btn-service">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="wrap">
+            <h2 class="section-title">Vídeo institucional</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/HwElGGq-muw"
+                                title="Introducción Proyectos y servicios Torre Blu"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3>Introducción Proyectos y servicios Torre Blu</h3>
+                    <p>Somos una empresa ecuatoriana dedicada a la venta de insumos y soluciones eléctricas para los sectores residencial y agroindustrial de la provincia de Los Ríos y sus alrededores, con una clara visión de expansión a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="wrap">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
+                    <h3>Instalaciones Eléctricas</h3>
+                    <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-clipboard-check fa-2x"></i>
+                    <h3>Proformas y Evaluaciones</h3>
+                    <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-microchip fa-2x"></i>
+                    <h3>Automatización y Control</h3>
+                    <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-lightbulb fa-2x"></i>
+                    <h3>Iluminación</h3>
+                    <p>Optimización de iluminación para ahorro energético y seguridad.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar este servicio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2 class="section-title">Documentos Disponibles</h2>
+            <div class="cards-section">
+                <div class="cards">
+                    <div class="card">
+                        <h3>NEO ELITECH</h3>
+                        <p>Manual de usuario.</p>
+                        <div class="card-buttons" style="text-align:center;">
+                            <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>JAGO Electrical Group</h3>
+                        <p>Catálogo de productos.</p>
+                        <div class="card-buttons" style="text-align:center;">
+                            <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="cards">
+                <div class="card-buttons" style="display:flex; justify-content:center;">
+                    <a href="recursos.html" class="btn-service">Ver más catálogos</a>
+                </div>    
+            </div>
+        </div>
+    </section>		
+
+    <section class="cards-section">
+        <div class="wrap">
+            <h2 class="section-title">Proyectos Recientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos del AGD">
+                    <h3>Análisis de datos del AGD</h3>
+                    <p>Analizamos los resultados de gases disueltos en el aceite de los transformadores con técnicas avanzadas.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
+                    <h3>Cuarto de inversores</h3>
+                    <p>Realizamos proyectos de generación fotovoltaica.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
+                    <h3>Tableros de fuerza</h3>
+                    <p>Desarrollamos tableros de fuerza para el sector de energía y agroindustrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="cards">
+                <div class="card-buttons" style="display:flex; justify-content:center;">
+                    <a href="galeria.html" class="btn-service">Ver más proyectos realizados</a>
+                </div>    
+            </div>
+        </div>
+    </section>		
+
+    <footer>
+        © <span id="year"></span> TORREBLU – Todos los derechos reservados
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
