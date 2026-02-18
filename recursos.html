@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos / Catálogos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TORREBLU | Recursos y Catálogos</title>
+    <link rel="stylesheet" href="styles.css?v=1.6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body class="recursos-page">
 
-    <header class="topnav">
+<header class="topnav">
     <div class="nav-container">
-        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> <ul id="nav-links">
+        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> 
+        <ul id="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="productos.html">Productos</a></li>
@@ -24,102 +26,99 @@
     </div>
 </header>
 
-    <section class="hero">
-        <div class="wrap">
-            <h1>Catálogos y Recursos</h1>
-            <p>Seleccione un documento para visualizarlo o descargarlo.</p>
-        </div>
-    </section>
+<section class="hero">
+    <div class="wrap">
+        <h1>Catálogos y Recursos</h1>
+        <p>Documentación técnica, manuales de usuario y catálogos de productos.</p>
+    </div>
+</section>
 
-    <section>
-        <div class="wrap">
-            <h2 class="section-title">Documentos Disponibles</h2>
-            <div class="cards-section">
-                <div class="cards">
-                    
-                    <div class="card">
-                        <h3>NEO ELITECH</h3>
-                        <p>Manual de usuario.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/ECS-961-NEO ELITECH.pdf')">Ver</button>
-                            <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>JAGO Electrical Group</h3>
-                        <p>Catálogo de productos.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/atalogo_JAGO-2024-INTERACTIVO.pdf')">Ver</button>
-                            <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>Catálogo 3</h3>
-                        <p>Descripción breve del contenido.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo3.pdf')">Ver</button>
-                            <a href="assets/docs/catalogo3.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>Catálogo 4</h3>
-                        <p>Descripción breve del contenido.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo4.pdf')">Ver</button>
-                            <a href="assets/docs/catalogo4.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>Catálogo 5</h3>
-                        <p>Descripción breve del contenido.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo5.pdf')">Ver</button>
-                            <a href="assets/docs/catalogo5.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3>Catálogo 6</h3>
-                        <p>Descripción breve del contenido.</p>
-                        <div class="card-buttons">
-                            <button class="btn-service" onclick="loadPDF('assets/docs/catalogo6.pdf')">Ver</button>
-                            <a href="assets/docs/catalogo6.pdf" class="btn-service" download>Descargar</a>
-                        </div>
-                    </div>
-
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Documentos Disponibles</h2>
+        <div class="cards">
+            
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>NEO ELITECH</h3>
+                <p>Manual técnico para controladores de temperatura.</p>
+                <div class="card-buttons">
+                    <button class="btn-service btn-view" data-pdf="assets/docs/ECS-961-NEO ELITECH.pdf">
+                        <i class="fa-solid fa-eye"></i> Ver
+                    </button>
+                    <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>
+                        <i class="fa-solid fa-download"></i> Bajar
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="pdf-section">
-        <div class="wrap">
-            <h2 class="section-title">Vista Previa</h2>
-            
-            <div class="pdf-window">
-                <div class="pdf-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="pdf-title">Visor de Catálogos</span>
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>JAGO Electrical</h3>
+                <p>Catálogo 2024 de componentes eléctricos industriales.</p>
+                <div class="card-buttons">
+                    <button class="btn-service btn-view" data-pdf="assets/docs/atalogo_JAGO-2024-INTERACTIVO.pdf">
+                        <i class="fa-solid fa-eye"></i> Ver
+                    </button>
+                    <a href="assets/docs/atalogo_JAGO-2024-INTERACTIVO.pdf" class="btn-service" download>
+                        <i class="fa-solid fa-download"></i> Bajar
+                    </a>
                 </div>
-                <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf"></iframe>
             </div>
-            
-            <p style="text-align:center; margin-top:15px; font-size:0.9rem; color:#666;">
-                El visor de PDF se actualiza al hacer clic en "Ver". ¿Necesitas guardarlo? Descárgalo directamente desde el botón.
-            </p>
+
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Catálogo General</h3>
+                <p>Resumen detallado de nuestra línea de suministros.</p>
+                <div class="card-buttons">
+                    <button class="btn-service btn-view" data-pdf="assets/docs/catalogo3.pdf">
+                        <i class="fa-solid fa-eye"></i> Ver
+                    </button>
+                    <a href="assets/docs/catalogo3.pdf" class="btn-service" download>
+                        <i class="fa-solid fa-download"></i> Bajar
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Fichas Técnicas</h3>
+                <p>Especificaciones detalladas de equipos industriales.</p>
+                <div class="card-buttons">
+                    <button class="btn-service btn-view" data-pdf="assets/docs/catalogo4.pdf">
+                        <i class="fa-solid fa-eye"></i> Ver
+                    </button>
+                    <a href="assets/docs/catalogo4.pdf" class="btn-service" download>
+                        <i class="fa-solid fa-download"></i> Bajar
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
-    <footer>
+    </div>
+</section>
+
+<section class="pdf-section">
+    <div class="wrap">
+        <h2 class="section-title">Visualizador Técnico</h2>
+        <div class="pdf-window">
+            <div class="pdf-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="pdf-title" id="pdf-name">Vista Previa</span>
+            </div>
+            <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
         © <span id="year"></span> TORREBLU – Todos los derechos reservados
-    </footer>
+    </div>
+</footer>
 
-<script src="main.js"></script>
+<script src="main.js?v=1.6"></script>
 </body>
 </html>
-
