@@ -60,23 +60,7 @@
             </button>
 
             <div class="carousel-track" id="carousel-track">
-
-                <div class="carousel-item">
-                    <img src="assets/images/productos/producto1.jpeg" alt="Producto 1">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/images/productos/producto2.jpeg" alt="Producto 2">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/images/productos/producto3.jpeg" alt="Producto 3">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/images/productos/producto4.jpeg" alt="Producto 4">
-                </div>
-
+                <!-- Se cargan automáticamente desde productos.html -->
             </div>
 
             <button class="carousel-btn next" id="carousel-next">
@@ -123,6 +107,45 @@
 <footer>
     © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    fetch("productos.html")
+        .then(response => response.text())
+        .then(data => {
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, "text/html");
+
+            // Ajusta esta clase si en productos.html usas otra
+            const productos = doc.querySelectorAll(".producto");
+
+            const track = document.getElementById("carousel-track");
+            track.innerHTML = "";
+
+            productos.forEach(producto => {
+                const img = producto.querySelector("img");
+                if (img) {
+                    const item = document.createElement("div");
+                    item.className = "carousel-item";
+
+                    const newImg = document.createElement("img");
+                    newImg.src = img.getAttribute("src");
+                    newImg.alt = img.getAttribute("alt");
+
+                    item.appendChild(newImg);
+                    track.appendChild(item);
+                }
+            });
+
+        })
+        .catch(error => {
+            console.error("Error cargando productos:", error);
+        });
+
+});
+</script>
 
 <script src="main.js"></script>
 </body>
