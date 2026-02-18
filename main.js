@@ -1,19 +1,26 @@
 /* ===================================================
-   MAIN.JS - TORREBLU (VERSIÓN MEJORADA)
+   MAIN.JS - TORREBLU (VERSIÓN DEFINITIVA v1.5)
 =================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. FOOTER - AÑO ACTUAL
+    // 1. FOOTER - AÑO ACTUAL AUTOMÁTICO
     const yearElem = document.getElementById("year");
-    if (yearElem) yearElem.textContent = new Date().getFullYear();
+    if (yearElem) {
+        yearElem.textContent = new Date().getFullYear();
+    }
 
-    // 2. MENÚ ACTIVO Y HAMBURGUESA
-    let currentPage = location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll(".topnav a");
+    // 2. NAVEGACIÓN - MENÚ ACTIVO Y HAMBURGUESA
+    const currentPath = location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".topnav ul li a");
     
-    links.forEach(link => {
-        if (link.getAttribute("href") === currentPage) link.classList.add("active");
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
     });
 
     const hamburger = document.getElementById("nav-toggle");
@@ -23,10 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.addEventListener("click", (e) => {
             e.preventDefault();
             navMenu.classList.toggle("active");
+            // Cambiar el icono de hamburguesa a una X si está activo
+            hamburger.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
         });
     }
 
-    // 3. LOGICA DEL CARRUSEL DINÁMICO
+    // 3. LÓGICA DEL CARRUSEL DINÁMICO (FETCH DE PRODUCTOS)
     const track = document.getElementById("carousel-track");
     const prevBtn = document.getElementById("carousel-prev");
     const nextBtn = document.getElementById("carousel-next");
@@ -34,72 +43,101 @@ document.addEventListener("DOMContentLoaded", () => {
     if (track) {
         // Cargar productos desde productos.html
         fetch("productos.html")
-            .then(res => res.text())
+            .then(res => {
+                if (!res.ok) throw new Error("No se pudo cargar productos.html");
+                return res.text();
+            })
             .then(html => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, "text/html");
+                // Buscamos los elementos con clase .card.producto
                 const productos = doc.querySelectorAll(".card.producto");
 
-                track.innerHTML = ""; // Limpiar
+                if (productos.length > 0) {
+                    track.innerHTML = ""; // Limpiamos el track antes de inyectar
 
-                productos.forEach(prod => {
-                    const imgOriginal = prod.querySelector("img");
-                    if (imgOriginal) {
-                        const item = document.createElement("div");
-                        item.className = "carousel-item";
-                        const img = document.createElement("img");
-                        img.src = imgOriginal.src;
-                        img.alt = imgOriginal.alt;
-                        item.appendChild(img);
-                        track.appendChild(item);
-                    }
-                });
+                    productos.forEach(prod => {
+                        const imgOriginal = prod.querySelector("img");
+                        if (imgOriginal) {
+                            const item = document.createElement("div");
+                            item.className = "carousel-item";
+                            
+                            const img = document.createElement("img");
+                            img.src = imgOriginal.src;
+                            img.alt = imgOriginal.alt || "Producto TorreBlu";
+                            
+                            item.appendChild(img);
+                            track.appendChild(item);
+                        }
+                    });
 
-                // Una vez cargados, activar Autoplay
-                initCarouselLogic();
+                    // Inicializamos la lógica de movimiento una vez inyectados los datos
+                    initCarouselLogic();
+                } else {
+                    console.warn("No se encontraron elementos con la clase .card.producto en productos.html");
+                }
             })
-            .catch(err => console.error("Error al cargar carrusel:", err));
+            .catch(err => {
+                console.error("Error en el fetch del carrusel:", err);
+            });
     }
 
     function initCarouselLogic() {
         if (!track || !prevBtn || !nextBtn) return;
 
-        const scrollStep = 325; // Ancho item + gap
+        // Calculamos el desplazamiento basado en el ancho del primer item
+        const getScrollStep = () => {
+            const firstItem = track.querySelector(".carousel-item");
+            return firstItem ? firstItem.offsetWidth + 25 : 325; // 25 es el gap del CSS
+        };
+
         let autoPlayInterval;
 
-        // Función para mover al siguiente
         const moveNext = () => {
+            const step = getScrollStep();
+            // Si llegamos al final (con un margen de 10px), volvemos al inicio
             if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
                 track.scrollTo({ left: 0, behavior: "smooth" });
             } else {
-                track.scrollBy({ left: scrollStep, behavior: "smooth" });
+                track.scrollBy({ left: step, behavior: "smooth" });
             }
         };
 
-        // Iniciar Autoplay
+        const movePrev = () => {
+            const step = getScrollStep();
+            if (track.scrollLeft <= 0) {
+                track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+            } else {
+                track.scrollBy({ left: -step, behavior: "smooth" });
+            }
+        };
+
+        // Autoplay cada 4 segundos
         const startAutoPlay = () => {
+            stopAutoPlay(); // Limpiamos cualquier intervalo previo por seguridad
             autoPlayInterval = setInterval(moveNext, 4000);
         };
 
         const stopAutoPlay = () => clearInterval(autoPlayInterval);
 
-        // Eventos de botones
+        // Listeners de botones
         nextBtn.addEventListener("click", () => {
             stopAutoPlay();
             moveNext();
-            startAutoPlay(); // Reiniciar el timer
+            startAutoPlay();
         });
 
         prevBtn.addEventListener("click", () => {
             stopAutoPlay();
-            track.scrollBy({ left: -scrollStep, behavior: "smooth" });
+            movePrev();
             startAutoPlay();
         });
 
-        // Pausar al pasar el ratón
+        // Pausa al pasar el ratón por encima del carrusel
         track.addEventListener("mouseenter", stopAutoPlay);
         track.addEventListener("mouseleave", startAutoPlay);
 
+        // Iniciar
         startAutoPlay();
     }
 });
