@@ -643,6 +643,78 @@ body.productos-page {
 }
 
 /* ===================================================
+   CARRUSEL PRODUCTOS (INDEX)
+=================================================== */
+
+.carousel-section {
+    background: #ffffff;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 300px;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0059b3;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    background: #003366;
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ===================================================
    FOOTER
 =================================================== */
 
