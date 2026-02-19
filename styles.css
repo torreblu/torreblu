@@ -98,7 +98,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    HERO SECTION (Sólida - Sin Efecto Glass)
+    HERO SECTION
 =================================================== */
 .hero {
     margin-top: 60px;
@@ -181,7 +181,7 @@ h1, h2, h3, .section-title {
 .next { right: -10px; }
 
 /* ===================================================
-    CARDS (DISEÑO INDUSTRIAL LIMPIO)
+    CARDS
 =================================================== */
 .cards {
     display: grid;
@@ -202,12 +202,6 @@ h1, h2, h3, .section-title {
 
 .card:hover { transform: translateY(-5px); border-color: #00aaff; }
 
-.card i {
-    font-size: 2.5rem;
-    color: #0059b3;
-    margin-bottom: 20px;
-}
-
 .card img {
     width: 100%;
     height: 200px;
@@ -217,98 +211,30 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    BOTONES DE CONTACTO (ESTILO RECUPERADO)
-=================================================== */
-.contact-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 15px;
-    text-decoration: none;
-    color: #001f3f;
-    transition: 0.3s;
-    border: 1px solid #d1d9e0;
-    margin: 10px;
-}
-
-.contact-btn i {
-    font-size: 2.2rem;
-    color: #0059b3;
-    margin-bottom: 12px;
-}
-
-.contact-btn span {
-    font-size: 0.85rem;
-    color: #666;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.contact-btn strong {
-    font-size: 1.3rem;
-    margin: 8px 0;
-    color: #001f3f;
-}
-
-.contact-btn .action-text {
-    background: #0059b3;
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.contact-btn:hover {
-    background-color: #f8fbff;
-    border-color: #00aaff;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* ===================================================
-    ELEMENTOS DE ACCIÓN Y VIDEO
+    BOTONES DE RECURSOS (MODIFICADOS)
 =================================================== */
 .btn-service {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 6px 14px;          /* MÁS PEQUEÑOS */
+    font-size: 0.85rem;         /* TEXTO MÁS COMPACTO */
     background-color: #0059b3;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
     transition: 0.3s;
 }
 
-.btn-service:hover { background-color: #003366; }
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin-bottom: 20px;
+.btn-service:hover { 
+    background-color: #003366; 
 }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border-radius: 8px;
-}
-
-/* ===================================================
-    ESPECÍFICOS: RECURSOS Y VISOR PDF
-=================================================== */
 .card-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .btn-view {
@@ -317,8 +243,14 @@ h1, h2, h3, .section-title {
     border: 1px solid #d1d9e0;
 }
 
-.btn-view:hover { background: #d1d9e0; color: #003366; }
+.btn-view:hover { 
+    background: #d1d9e0; 
+    color: #003366; 
+}
 
+/* ===================================================
+    VISOR PDF
+=================================================== */
 .pdf-window {
     background: #1a1a1a;
     border-radius: 12px;
