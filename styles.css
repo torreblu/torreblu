@@ -297,14 +297,18 @@ h1, h2, h3, .section-title {
 .map-section .video-wrapper {
     width: 100%;
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
 }
 
 .map-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100% !important;
-    height: 500px !important;
+    height: 100% !important;
     border: 0;
     border-radius: 12px;
-    display: block;
 }
 
 /* ===================================================
@@ -317,13 +321,17 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    VISOR Youtube
+    VISOR YOUTUBE CORREGIDO
 =================================================== */
 .video-wrapper {
     position: relative;
-    width: 750%;
+    width: 100%;
+    max-width: 100%;
     padding-bottom: 56.25%; /* Proporción 16:9 */
     height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .video-wrapper iframe {
@@ -334,12 +342,6 @@ h1, h2, h3, .section-title {
     height: 100%;
     border: 0;
 }
-
-
-
-
-
-
 
 /* ===================================================
     FOOTER
