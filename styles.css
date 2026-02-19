@@ -321,7 +321,7 @@ h1, h2, h3, .section-title {
 =================================================== */
 .video-wrapper {
     position: relative;
-    width: 100%;
+    width: 750%;
     padding-bottom: 56.25%; /* Proporción 16:9 */
     height: 0;
 }
