@@ -109,17 +109,6 @@ h1, h2, h3, .section-title {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    color: #001f3f;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
 /* ===================================================
     CARRUSEL DE PRODUCTOS
 =================================================== */
@@ -211,12 +200,12 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    BOTONES DE RECURSOS (MODIFICADOS)
+    BOTONES DE RECURSOS
 =================================================== */
 .btn-service {
     display: inline-block;
-    padding: 6px 14px;          /* MÁS PEQUEÑOS */
-    font-size: 0.85rem;         /* TEXTO MÁS COMPACTO */
+    padding: 6px 14px;
+    font-size: 0.85rem;
     background-color: #0059b3;
     color: #fff;
     text-decoration: none;
@@ -302,46 +291,29 @@ h1, h2, h3, .section-title {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* ===================================================
+    MAPA CORREGIDO (AMPLIO Y RESPONSIVO)
+=================================================== */
+.map-section .video-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.map-section iframe {
+    width: 100% !important;
+    height: 500px !important;
+    border: 0;
+    border-radius: 12px;
+    display: block;
+}
 
 /* ===================================================
     VISOR PDF
 =================================================== */
-.pdf-window {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    border: 1px solid #333;
-    margin-top: 30px;
-}
-
-.pdf-header {
-    background: #2d2d2d;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-
-.pdf-title {
-    color: #aaa;
-    font-size: 0.75rem;
-    margin-left: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .pdf-viewer {
     width: 100%;
     height: 700px;
     border: none;
-    background: #fff;
-    transition: opacity 0.3s;
 }
 
 /* ===================================================
