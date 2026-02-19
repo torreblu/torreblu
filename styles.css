@@ -329,14 +329,14 @@ h1, h2, h3, .section-title {
 /* ===================================================
     VISOR YOUTUBE
 =================================================== */
-.video-wrapper.youtube {
+.video-wrapper {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Proporción 16:9 */
+    width: 100%;        /* ancho completo del contenedor */
+    padding-bottom: 56.25%; /* altura proporcional 16:9 */
     height: 0;
 }
 
-.video-wrapper.youtube iframe {
+.video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -344,6 +344,7 @@ h1, h2, h3, .section-title {
     height: 100%;
     border: 0;
 }
+
 
 /* ===================================================
     FOOTER
