@@ -296,7 +296,7 @@ h1, h2, h3, .section-title {
 =================================================== */
 .map-section .video-wrapper {
     width: 100%;
-    height: 450px; /* alto fijo para el mapa */
+    height: 4000px; /* alto fijo para el mapa */
     margin-bottom: 20px;
 }
 
