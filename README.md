@@ -33,7 +33,7 @@ assets/ → Imágenes y recursos visuales
 
 styles/ → Hojas de estilo
 
-scripts/ → Funciones y comportamiento del sitio
+main/ → Funciones y comportamiento del sitio
 
 CNAME → Configuración para dominio personalizado
 
