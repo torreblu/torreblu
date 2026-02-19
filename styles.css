@@ -1,5 +1,5 @@
 /* ===================================================
-    RESET Y ESTILOS BASE (Sólidos y Profesionales)
+    ESTILOS BASE
 =================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
@@ -28,7 +28,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    NAVEGACIÓN (MENÚ CENTRADO EN TODAS LAS PÁGINAS)
+    NAVEGACIÓN 
 =================================================== */
 .topnav {
     width: 100%;
@@ -292,7 +292,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    MAPA CORREGIDO (AMPLIO Y RESPONSIVO)
+    MAPA (AMPLIO Y RESPONSIVO)
 =================================================== */
 .map-section .map-container {
     width: 100%;
@@ -323,7 +323,7 @@ h1, h2, h3, .section-title {
 =================================================== */
 .video-wrapper {
     position: relative;
-    width: 100%;        /* ancho completo del contenedor */
+    width: 100%;        
     padding-bottom: 56.25%; /* altura proporcional 16:9 */
     height: 0;
 }
