@@ -294,26 +294,18 @@ h1, h2, h3, .section-title {
 /* ===================================================
     MAPA CORREGIDO (AMPLIO Y RESPONSIVO)
 =================================================== */
-.map-section .video-wrapper {
+.map-section .map-container {
     width: 100%;
-    height: 800px; /* alto fijo para el mapa */
-    margin-bottom: 20px;
+    height: 800px; /* altura deseada */
 }
-
-.map-section iframe {
+.map-section .map-container iframe {
     width: 100%;
     height: 100%;
     border: 0;
     border-radius: 12px;
     display: block;
 }
-.map-section .map-hours {
-    text-align: center;
-    font-size: 1rem;
-    color: #001f3f;
-    margin-top: 15px;
-    font-weight: 600;
-}
+
 
 
 
