@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const startAutoPlay = () => {
             clearInterval(autoPlayInterval);
-            autoPlayInterval = setInterval(moveNext, 1500);
+            autoPlayInterval = setInterval(moveNext, 1000);
         };
 
         const stopAutoPlay = () => clearInterval(autoPlayInterval);
