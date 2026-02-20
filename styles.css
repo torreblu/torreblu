@@ -1,5 +1,5 @@
 /* ===================================================
-    AJUSTES DE ARQUITECTURA (Sugeridos para DRY)
+                CSS para TORREBLU
 =================================================== */
 
 /* Contenedores para evitar saltos de diseño (layout shift) */
@@ -10,10 +10,6 @@
 #footer-site {
     min-height: 100px;
 }
-
-/* El resto de tus estilos se mantienen idénticos abajo */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -28,15 +24,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
-
-
-
 /* ===================================================
-    ESTILOS BASE
+                ESTILOS BASE
 =================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +53,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    NAVEGACIÓN 
+                NAVEGACIÓN 
 =================================================== */
 .topnav {
     width: 100%;
@@ -132,7 +123,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    HERO SECTION
+                    HERO SECTION
 =================================================== */
 .hero {
     margin-top: 60px;
@@ -144,7 +135,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    CARRUSEL DE PRODUCTOS
+                CARRUSEL DE PRODUCTOS
 =================================================== */
 .carousel-section {
     background: #fff;
@@ -204,7 +195,7 @@ h1, h2, h3, .section-title {
 .next { right: -10px; }
 
 /* ===================================================
-    CARDS
+                    CARDS
 =================================================== */
 .cards {
     display: grid;
@@ -234,7 +225,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    PILARES DE SERVICIO
+            PILARES DE SERVICIO
 =================================================== */
 
 .services-section .card {
@@ -249,7 +240,7 @@ h1, h2, h3, .section-title {
 
 
 /* ===================================================
-    BOTONES DE RECURSOS
+                BOTONES DE RECURSOS
 =================================================== */
 .btn-service {
     display: inline-block;
@@ -287,7 +278,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    BOTONES DE CONTACTO 
+                BOTONES DE CONTACTO 
 =================================================== */
 .contact-btn {
     display: flex;
@@ -341,7 +332,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    MAPA (AMPLIO Y RESPONSIVO)
+                    MAPA 
 =================================================== */
 .map-section .map-container {
     width: 100%;
@@ -359,7 +350,7 @@ h1, h2, h3, .section-title {
 
 
 /* ===================================================
-    VISOR PDF
+                    VISOR PDF
 =================================================== */
 .pdf-viewer {
     width: 100%;
@@ -368,7 +359,7 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
-    VISOR YOUTUBE
+                VISOR YOUTUBE
 =================================================== */
 .video-wrapper {
     position: relative;
@@ -388,7 +379,7 @@ h1, h2, h3, .section-title {
 
 
 /* ===================================================
-    FOOTER
+                    FOOTER
 =================================================== */
 footer {
     background-color: #001f3f;
