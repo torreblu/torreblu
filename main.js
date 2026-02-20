@@ -6,7 +6,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // 1. FOOTER - ACTUALIZACIÓN DE AÑO AUTOMÁTICA
-    // Busca el id="year" y coloca el año actual (ej. 2026)
     const yearElem = document.getElementById("year");
     if (yearElem) {
         yearElem.textContent = new Date().getFullYear();
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.addEventListener("click", (e) => {
             e.preventDefault();
             navMenu.classList.toggle("active");
-            // Cambia el icono de hamburguesa por una X al abrir
             hamburger.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
         });
     }
@@ -54,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const productos = doc.querySelectorAll(".card.producto");
 
                 if (productos.length > 0) {
-                    track.innerHTML = ""; // Limpiar contenido previo
+                    track.innerHTML = "";
                     productos.forEach(prod => {
                         const imgOriginal = prod.querySelector("img");
                         if (imgOriginal) {
@@ -67,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             track.appendChild(item);
                         }
                     });
+
                     initCarouselLogic();
                 }
             })
@@ -76,24 +75,50 @@ document.addEventListener("DOMContentLoaded", () => {
     function initCarouselLogic() {
         if (!track || !prevBtn || !nextBtn) return;
 
+        const items = Array.from(track.children);
+        if (items.length === 0) return;
+
         const getScrollStep = () => {
             const firstItem = track.querySelector(".carousel-item");
-            return firstItem ? firstItem.offsetWidth + 25 : 325; // Ancho + gap
+            return firstItem ? firstItem.offsetWidth + 25 : 325;
         };
+
+        // 🔁 CLONAR PRIMEROS Y ÚLTIMOS ELEMENTOS PARA EFECTO INFINITO
+        const firstClones = items.map(item => item.cloneNode(true));
+        const lastClones = items.map(item => item.cloneNode(true));
+
+        firstClones.forEach(clone => track.appendChild(clone));
+        lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+
+        // Ajustar posición inicial
+        const initialOffset = items.length * getScrollStep();
+        track.scrollLeft = initialOffset;
 
         let autoPlayInterval;
 
         const moveNext = () => {
-            if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
-                track.scrollTo({ left: 0, behavior: "smooth" });
-            } else {
-                track.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+            track.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+        };
+
+        const movePrev = () => {
+            track.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+        };
+
+        const checkInfiniteScroll = () => {
+            const totalWidth = getScrollStep() * items.length;
+
+            if (track.scrollLeft <= 0) {
+                track.scrollLeft = totalWidth;
+            }
+
+            if (track.scrollLeft >= totalWidth * 2) {
+                track.scrollLeft = totalWidth;
             }
         };
 
         const startAutoPlay = () => {
             clearInterval(autoPlayInterval);
-            autoPlayInterval = setInterval(moveNext, 1000);
+            autoPlayInterval = setInterval(moveNext, 3000);
         };
 
         const stopAutoPlay = () => clearInterval(autoPlayInterval);
@@ -101,13 +126,19 @@ document.addEventListener("DOMContentLoaded", () => {
         nextBtn.addEventListener("click", () => {
             stopAutoPlay();
             moveNext();
+            setTimeout(checkInfiniteScroll, 400);
             startAutoPlay();
         });
 
         prevBtn.addEventListener("click", () => {
             stopAutoPlay();
-            track.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+            movePrev();
+            setTimeout(checkInfiniteScroll, 400);
             startAutoPlay();
+        });
+
+        track.addEventListener("scroll", () => {
+            checkInfiniteScroll();
         });
 
         track.addEventListener("mouseenter", stopAutoPlay);
@@ -117,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 4. LÓGICA DE RECURSOS (VISOR DE PDF)
-    // Escucha clics en botones con clase .btn-view y lee el atributo data-pdf
     const visorPDF = document.getElementById('visorPDF');
     const pdfTitle = document.getElementById('pdf-name');
     const btnViews = document.querySelectorAll('.btn-view');
@@ -128,18 +158,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 const url = this.getAttribute('data-pdf');
                 if (!url) return;
 
-                // Efecto visual de transición
                 visorPDF.style.opacity = '0.3';
                 
                 setTimeout(() => {
                     visorPDF.src = url;
-                    // Actualiza el título en la barra del visor
+
                     if (pdfTitle) {
                         pdfTitle.textContent = url.split('/').pop().replace(/%20/g, ' ');
                     }
+
                     visorPDF.style.opacity = '1';
                     
-                    // Scroll automático hacia el visor para mejor experiencia
                     const pdfSection = document.querySelector('.pdf-section');
                     if (pdfSection) {
                         pdfSection.scrollIntoView({ behavior: 'smooth' });
