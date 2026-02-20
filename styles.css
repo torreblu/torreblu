@@ -200,6 +200,21 @@ h1, h2, h3, .section-title {
 }
 
 /* ===================================================
+    PILARES DE SERVICIO
+=================================================== */
+
+.services-section .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-section .card .btn-service {
+    margin-top: auto;
+}
+
+
+
+/* ===================================================
     BOTONES DE RECURSOS
 =================================================== */
 .btn-service {
