@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://www.torreblu.com/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -49,5 +49,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 
 </urlset>
