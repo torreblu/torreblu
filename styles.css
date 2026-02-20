@@ -1,4 +1,38 @@
 /* ===================================================
+    AJUSTES DE ARQUITECTURA (Sugeridos para DRY)
+=================================================== */
+
+/* Contenedores para evitar saltos de diseño (layout shift) */
+#header-site {
+    min-height: 70px; /* Altura aproximada de tu topnav */
+}
+
+#footer-site {
+    min-height: 100px;
+}
+
+/* El resto de tus estilos se mantienen idénticos abajo */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #001f3f;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+/* ===================================================
     ESTILOS BASE
 =================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
