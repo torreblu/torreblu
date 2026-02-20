@@ -18,74 +18,71 @@
 </head>
 
 <body>
-
     <audio id="musica" autoplay loop muted>
         <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
     </audio>
 
  <div id="header-site"></div>
 
-    <section class="hero">
-        <div class="wrap">
-            <h1>La energía de tu empresa, en un solo lugar</h1>
-            <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
-            <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
+ <section class="hero">
+     <div class="wrap">
+         <h1>La energía de tu empresa, en un solo lugar</h1>
+         <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
+         <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
+    </div>
+</section>
+
+<section class="carousel-section">
+    <div class="wrap">
+        <h2 class="section-title">Nuestros Productos Destacados</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="carousel-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-track" id="carousel-track"></div>
+
+            <button class="carousel-btn next" id="carousel-next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
-    </section>
+        <div style="text-align:center;">
+            <a href="productos.html" class="btn-service">Ver todos los productos</a>
+        </div>
+    </div>
+</section>
 
-    <section class="carousel-section">
-        <div class="wrap">
-            <h2 class="section-title">Nuestros Productos Destacados</h2>
-            <div class="carousel-container">
-                <button class="carousel-btn prev" id="carousel-prev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-
-                <div class="carousel-track" id="carousel-track"></div>
-
-                <button class="carousel-btn next" id="carousel-next">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
+<section class="services-section">
+    <div class="wrap"> 
+        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+        <div class="cards"> 
+            <div class="card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Insumos Eléctricos</h3>
+                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                <a href="productos.html" class="btn-service">Explorar</a>
             </div>
-            <div style="text-align:center;">
-                <a href="productos.html" class="btn-service">Ver todos los productos</a>
+            <div class="card">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Instalaciones y Proformas</h3>
+                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                <a href="servicios.html" class="btn-service">Solicitar</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Proyectos y Automatización</h3>
+                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                <a href="servicios.html" class="btn-service">Conocer Más</a>
             </div>
         </div>
-    </section>
-
-    <section class="services-section">
-        <div class="wrap"> 
-            <h2 class="section-title">Nuestros Pilares de Servicio</h2>
-            <div class="cards"> 
-                <div class="card">
-                    <i class="fa-solid fa-bolt"></i>
-                    <h3>Insumos Eléctricos</h3>
-                    <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                    <a href="productos.html" class="btn-service">Explorar</a>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-wrench"></i>
-                    <h3>Instalaciones y Proformas</h3>
-                    <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
-                    <a href="servicios.html" class="btn-service">Solicitar</a>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-robot"></i>
-                    <h3>Proyectos y Automatización</h3>
-                    <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
-                    <a href="servicios.html" class="btn-service">Conocer Más</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
   <!-- acá el vídeo-->
 <section>
     <div class="wrap">
         <h2 class="section-title">Vídeo institucional</h2>
-
         <div class="cards">
-            
             <div class="card">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/HwElGGq-muw"
@@ -102,92 +99,88 @@
 </section>
 
 
-    <section class="cards-section">
-        <div class="wrap">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="cards">
-                <div class="card">
-                    <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
-                    <h3>Instalaciones Eléctricas</h3>
-                    <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar</a>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-clipboard-check fa-2x"></i>
-                    <h3>Proformas y Evaluaciones</h3>
-                    <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar</a>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-microchip fa-2x"></i>
-                    <h3>Automatización y Control</h3>
-                    <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar</a>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-lightbulb fa-2x"></i>
-                    <h3>Iluminación</h3>
-                    <p>Optimización de iluminación para ahorro energético y seguridad.</p>
-                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar</a>
-                </div>
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
+                <h3>Instalaciones Eléctricas</h3>
+                <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-clipboard-check fa-2x"></i>
+                <h3>Proformas y Evaluaciones</h3>
+                <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip fa-2x"></i>
+                <h3>Automatización y Control</h3>
+                <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización%20y%20control." class="btn-service" target="_blank">Solicitar</a>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-lightbulb fa-2x"></i>
+                <h3>Iluminación</h3>
+                <p>Optimización de iluminación para ahorro energético y seguridad.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20para%20iluminación." class="btn-service" target="_blank">Solicitar</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-        <div class="wrap">
-            <h2 class="section-title">Documentos Disponibles</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>NEO ELITECH</h3>
-                    <p>Manual de usuario.</p>
-                    <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
-                </div>
-                <div class="card">
-                    <h3>JAGO Electrical Group</h3>
-                    <p>Catálogo de productos.</p>
-                    <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
-                </div>
+<section>
+    <div class="wrap">
+        <h2 class="section-title">Documentos Disponibles</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>NEO ELITECH</h3>
+                <p>Manual de usuario.</p>
+                <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
             </div>
-            <div style="text-align:center; margin-top:20px;">
-                <a href="recursos.html" class="btn-service">Ver más catálogos</a>
+            <div class="card">
+                <h3>JAGO Electrical Group</h3>
+                <p>Catálogo de productos.</p>
+                <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
             </div>
         </div>
-    </section>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="recursos.html" class="btn-service">Ver más catálogos</a>
+        </div>
+    </div>
+</section>
 
-    <section class="cards-section">
-        <div class="wrap">
-            <h2 class="section-title">Proyectos Recientes</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos">
-                    <h3>Análisis de datos del AGD</h3>
-                    <p>Técnicas avanzadas para gases disueltos en transformadores.</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
-                    <h3>Cuarto de inversores</h3>
-                    <p>Proyectos de generación fotovoltaica eficientes.</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
-                    <h3>Tableros de fuerza</h3>
-                    <p>Sistemas para el sector energía y agroindustrial.</p>
-                </div>
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Proyectos Recientes</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos">
+                <h3>Análisis de datos del AGD</h3>
+                <p>Técnicas avanzadas para gases disueltos en transformadores.</p>
             </div>
-            <div style="text-align:center; margin-top:20px;">
-                <a href="servicios.html" class="btn-service">Ver más proyectos</a>
+            <div class="card">
+                <img src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
+                <h3>Cuarto de inversores</h3>
+                <p>Proyectos de generación fotovoltaica eficientes.</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
+                <h3>Tableros de fuerza</h3>
+                <p>Sistemas para el sector energía y agroindustrial.</p>
             </div>
         </div>
-    </section>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="servicios.html" class="btn-service">Ver más proyectos</a>
+        </div>
+    </div>
+</section>
 
-    <div id="footer-site"></div>
+<div id="footer-site"></div>
 
-    <script src="main.js?v=1.5"></script>
+<script src="main.js?v=1.5"></script>
+
 </body>
 </html>
-
-
-
-
-
