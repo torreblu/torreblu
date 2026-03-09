@@ -156,6 +156,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+ // para el envío de correos
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw1mIpfQVgJtRe4wadhhPzUjwv_KAcYbHaefuY_ua7De5Bl_H1atbujg-4k8fJvenHNsA/exec";
+
+document.getElementById('torreblu-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const btn = form.querySelector('.contact-btn-submit');
+    const status = document.getElementById('form-status');
+    
+    // Bloquear botón mientras envía
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+    
+    const formData = new FormData(form);
+    
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        status.innerHTML = "¡Mensaje enviado con éxito! Nos contactaremos pronto.";
+        status.className = "status-msg status-success";
+        form.reset();
+    })
+    .catch(error => {
+        status.innerHTML = "Hubo un error. Por favor, intente de nuevo.";
+        status.className = "status-msg status-error";
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Mensaje';
+    });
+});
 
 
 
