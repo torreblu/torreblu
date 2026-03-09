@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
  // para el envío de correos
 // Configuración de la URL de tu script
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw1mIpfQVgJtRe4wadhhPzUjwv_KAcYbHaefuY_ua7De5Bl_H1atbujg-4k8fJvenHNsA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzYOKADnpQmnmmB8NjPUKdgfyyC51PfOUxRMSbHO4i0JvLv0x80XYIy9GAdVio9vTra/exec";
 
 document.getElementById('torreblu-form').addEventListener('submit', function(e) {
     e.preventDefault();
