@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  // para el envío de correos
+// Configuración de la URL de tu script
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw1mIpfQVgJtRe4wadhhPzUjwv_KAcYbHaefuY_ua7De5Bl_H1atbujg-4k8fJvenHNsA/exec";
 
 document.getElementById('torreblu-form').addEventListener('submit', function(e) {
@@ -166,30 +167,43 @@ document.getElementById('torreblu-form').addEventListener('submit', function(e) 
     const btn = form.querySelector('.contact-btn-submit');
     const status = document.getElementById('form-status');
     
-    // Bloquear botón mientras envía
+    // Feedback visual: deshabilitar botón y mostrar carga
     btn.disabled = true;
+    const originalBtnText = btn.innerHTML;
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
     
-    const formData = new FormData(form);
+    // Preparar los datos del formulario
+    const formData = new URLSearchParams(new FormData(form)).toString();
     
     fetch(SCRIPT_URL, {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors', // Fundamental para evitar errores de seguridad del navegador
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
     })
-    .then(response => {
+    .then(() => {
+        // Al usar 'no-cors', el navegador no puede leer la respuesta de Google,
+        // pero si llega aquí es porque la petición se envió con éxito.
         status.innerHTML = "¡Mensaje enviado con éxito! Nos contactaremos pronto.";
         status.className = "status-msg status-success";
+        status.style.display = "block";
         form.reset();
     })
     .catch(error => {
-        status.innerHTML = "Hubo un error. Por favor, intente de nuevo.";
+        console.error('Error de red:', error);
+        status.innerHTML = "Hubo un problema con la red. Por favor, intente de nuevo.";
         status.className = "status-msg status-error";
+        status.style.display = "block";
     })
     .finally(() => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Mensaje';
+        // Restaurar botón después de 3 segundos
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = originalBtnText;
+        }, 3000);
     });
 });
-
 
 
