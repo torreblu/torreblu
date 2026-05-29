@@ -3,104 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TORREBLU | Recursos y Catálogos</title>
-    <link rel="stylesheet" href="styles.css?v=1.6">
+    <title>TORREBLU | Recursos y catálogos técnicos</title>
+    <meta name="description" content="Documentación técnica, manuales y catálogos de productos eléctricos de las marcas con las que trabajamos.">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
+    <link rel="stylesheet" href="styles.css?v=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body class="recursos-page">
     <div id="header-site"></div>
 
-<section class="hero">
-    <div class="wrap">
-        <h1>Catálogos y Recursos</h1>
-        <p>Documentación técnica, manuales de usuario y catálogos de productos.</p>
-    </div>
-</section>
-
-<section class="cards-section">
-    <div class="wrap">
-        <h2 class="section-title">Documentos Disponibles</h2>
-        <div class="cards">
-            
-            <div class="card">
-                <i class="fa-solid fa-file-pdf"></i>
-                <h3>NEO ELITECH</h3>
-                <p>Manual técnico para controladores de temperatura.</p>
-                <div class="card-buttons">
-                    <button class="btn-service btn-view" data-pdf="assets/docs/ECS-961-NEO ELITECH.pdf">
-                        <i class="fa-solid fa-eye"></i> Ver
-                    </button>
-                    <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>
-                        <i class="fa-solid fa-download"></i> Descargar
-                    </a>
-                </div>
+    <!-- HERO -->
+    <section class="hero compact">
+        <div class="wrap">
+            <span class="eyebrow">Documentación técnica</span>
+            <h1>Catálogos, manuales y <span class="hl">fichas técnicas</span></h1>
+            <p>Todo lo que necesitas para elegir el producto correcto. Descarga o visualiza en línea sin instalar nada.</p>
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a><span>/</span><span>Recursos</span>
             </div>
-
-            <div class="card">
-                <i class="fa-solid fa-file-pdf"></i>
-                <h3>JAGO Electrical</h3>
-                <p>Catálogo 2024 de componentes eléctricos industriales.</p>
-                <div class="card-buttons">
-                    <button class="btn-service btn-view" data-pdf="assets/docs/catalogo_JAGO-2024-INTERACTIVO.pdf">
-                        <i class="fa-solid fa-eye"></i> Ver
-                    </button>
-                    <a href="assets/docs/catalogo_JAGO-2024-INTERACTIVO.pdf" class="btn-service" download>
-                        <i class="fa-solid fa-download"></i> Descargar
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-file-pdf"></i>
-                <h3>Catálogo General</h3>
-                <p>Resumen detallado de nuestra línea de suministros.</p>
-                <div class="card-buttons">
-                    <button class="btn-service btn-view" data-pdf="assets/docs/catalogo3.pdf">
-                        <i class="fa-solid fa-eye"></i> Ver
-                    </button>
-                    <a href="assets/docs/catalogo3.pdf" class="btn-service" download>
-                        <i class="fa-solid fa-download"></i> Descargar
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <i class="fa-solid fa-file-pdf"></i>
-                <h3>Fichas Técnicas</h3>
-                <p>Especificaciones detalladas de equipos industriales.</p>
-                <div class="card-buttons">
-                    <button class="btn-service btn-view" data-pdf="assets/docs/catalogo4.pdf">
-                        <i class="fa-solid fa-eye"></i> Ver
-                    </button>
-                    <a href="assets/docs/catalogo4.pdf" class="btn-service" download>
-                        <i class="fa-solid fa-download"></i> Descargar
-                    </a>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="pdf-section">
-    <div class="wrap">
-        <h2 class="section-title">Visualizador Técnico</h2>
-        <div class="pdf-window">
-            <div class="pdf-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="pdf-title" id="pdf-name">Vista Previa</span>
+    <!-- DOCUMENTOS -->
+    <section class="surface">
+        <div class="wrap">
+            <span class="eyebrow on-light" style="display:flex; justify-content:center;">Biblioteca</span>
+            <h2 class="section-title">Documentos disponibles</h2>
+            <p class="section-lead">Haz clic en <b>Ver</b> para previsualizar en el visor inferior, o en <b>Descargar</b> para guardarlo.</p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>NEO ELITECH — ECS-961</h3>
+                    <p>Manual técnico para controladores de temperatura digitales para refrigeración industrial.</p>
+                    <div class="card-buttons">
+                        <button class="btn-service btn-view" data-pdf="assets/docs/ECS-961-NEO ELITECH.pdf">
+                            <i class="fa-solid fa-eye"></i> Ver
+                        </button>
+                        <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>
+                            <i class="fa-solid fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>JAGO Electrical</h3>
+                    <p>Catálogo 2024 interactivo de componentes eléctricos industriales: contactores, relés y más.</p>
+                    <div class="card-buttons">
+                        <button class="btn-service btn-view" data-pdf="assets/docs/catalogo_JAGO-2024-INTERACTIVO.pdf">
+                            <i class="fa-solid fa-eye"></i> Ver
+                        </button>
+                        <a href="assets/docs/catalogo_JAGO-2024-INTERACTIVO.pdf" class="btn-service" download>
+                            <i class="fa-solid fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Catálogo general</h3>
+                    <p>Resumen detallado de nuestra línea completa de suministros eléctricos y de automatización.</p>
+                    <div class="card-buttons">
+                        <button class="btn-service btn-view" data-pdf="assets/docs/catalogo3.pdf">
+                            <i class="fa-solid fa-eye"></i> Ver
+                        </button>
+                        <a href="assets/docs/catalogo3.pdf" class="btn-service" download>
+                            <i class="fa-solid fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Fichas técnicas</h3>
+                    <p>Especificaciones detalladas de equipos industriales seleccionados de nuestro catálogo.</p>
+                    <div class="card-buttons">
+                        <button class="btn-service btn-view" data-pdf="assets/docs/catalogo4.pdf">
+                            <i class="fa-solid fa-eye"></i> Ver
+                        </button>
+                        <a href="assets/docs/catalogo4.pdf" class="btn-service" download>
+                            <i class="fa-solid fa-download"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf"></iframe>
         </div>
-    </div>
-</section>
+    </section>
 
-<div id="footer-site"></div>
+    <!-- VISOR PDF -->
+    <section class="pdf-section">
+        <div class="wrap">
+            <span class="eyebrow on-light" style="display:flex; justify-content:center;">Visualizador</span>
+            <h2 class="section-title">Vista previa en línea</h2>
+            <p class="section-lead">Explora el documento sin necesidad de descargarlo.</p>
 
-<script src="main.js?v=1.5"></script>
+            <div class="pdf-window">
+                <div class="pdf-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="pdf-title" id="pdf-name">ECS-961-NEO ELITECH.pdf</span>
+                </div>
+                <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf" title="Visor de documentos"></iframe>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="wrap">
+            <div>
+                <h2>¿Necesitas la ficha técnica de un producto específico?</h2>
+                <p>Solicítala y te la enviamos por WhatsApp o correo electrónico.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="https://wa.me/593988847802?text=Hola,%20necesito%20una%20ficha%20técnica." class="btn-service" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar ficha
+                </a>
+                <a href="contacto.html" class="btn btn-ghost">Otros canales</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-site"></div>
+
+    <script src="main.js?v=2.1"></script>
 </body>
 </html>
