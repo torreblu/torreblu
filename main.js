@@ -3,6 +3,20 @@
     Cambios: Carga de Header/Footer externos y DRY
 =================================================== */
 
+// --- GOOGLE ANALYTICS 4 (carga única para todo el sitio) ---
+(function () {
+    const GA_ID = "G-Q5B8XE8KJX";
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // --- FUNCIÓN PARA CARGAR COMPONENTES EXTERNOS (DRY) ---

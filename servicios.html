@@ -1,113 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TORREBLU | Servicios</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TORREBLU | Servicios y proyectos</title>
+    <meta name="description" content="Servicios eléctricos, automatización industrial y proyectos a medida. Casos reales en agroindustria, panadería, transformadores y más.">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <div id="header-site"></div>
 
-    <section class="hero">
+    <!-- HERO COMPACTO -->
+    <section class="hero compact">
         <div class="wrap">
-            <h1>Servicios y Proyectos</h1>
-            <p>Somos el aliado estratégico del sector agroindustrial.</p>
+            <span class="eyebrow">Servicios técnicos</span>
+            <h1>Soluciones que <span class="hl">resuelven problemas reales</span></h1>
+            <p>Diseñamos, ejecutamos y mantenemos sistemas eléctricos y de automatización para industria, agroindustria y comercio.</p>
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a><span>/</span><span>Servicios</span>
+            </div>
         </div>
     </section>
 
-<section class="cards-section">
-    <div class="wrap">
-        <h2 class="section-title">Proyectos Recientes</h2>
-        <div class="cards">
-            <!-- acá inician los proyectos -->
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos del AGD">
-                <h3>Análisis de datos del AGD</h3>
-                <p>Analizamos los resultados de gases disueltos en el aceite de los transformadores con técnicas avanzadas.</p>
+    <!-- ÁREAS DE SERVICIO -->
+    <section class="surface">
+        <div class="wrap">
+            <span class="eyebrow on-light" style="display:flex; justify-content:center;">Áreas de servicio</span>
+            <h2 class="section-title">¿En qué podemos ayudarte?</h2>
+            <p class="section-lead">Cubrimos desde instalaciones residenciales hasta proyectos de automatización industrial completos.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                    <h3>Instalaciones eléctricas</h3>
+                    <p>Redes residenciales, comerciales e industriales bajo normativa NEC. Acometidas, tableros, puestas a tierra.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Automatización y control</h3>
+                    <p>Sistemas con PLC, HMI, sensores y tableros para máquinas, secadoras, hornos y procesos continuos.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20automatización." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Mantenimiento industrial</h3>
+                    <p>Preventivo y correctivo para tableros, motores, equipos de bombeo, hornos y quemadores.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20mantenimiento%20industrial." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <h3>Energía solar</h3>
+                    <p>Diseño e instalación de sistemas fotovoltaicos: paneles, inversores y baterías.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20información%20sobre%20energía%20solar." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Iluminación eficiente</h3>
+                    <p>Recambio a tecnología LED, diseño lumínico para naves, oficinas y exteriores.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20iluminación." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Proformas y consultoría</h3>
+                    <p>Levantamientos técnicos, evaluación de instalaciones existentes y proformas detalladas en 24h.</p>
+                    <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank" rel="noopener">Solicitar proforma</a>
+                </div>
             </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
-                <h3>Cuarto de inversores</h3>
-                <p>Realizamos proyectos de generación fotovoltaica.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
-                <h3>Tableros de fuerza</h3>
-                <p>Desarrollamos tableros de fuerza para el sector de energía y agroindustrial.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoTableroscontrol.jpeg" alt="Tableros de control">
-                <h3>Tableros de control</h3>
-                <p>Desarrollamos tableros de control industrial para aplicaciones según necesidad del cliente.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoAplicacionesplc.jpeg" alt="Aplicaciones en PLC multimarca">
-                <h3>Aplicaciones en PLC multimarca</h3>
-                <p>Resolvemos problemas de fallas en PLC multimarca</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoSecadoragranos.jpeg" alt="Secadoras de granos">
-                <h3>Secadoras de granos</h3>
-                <p>Desarrollamos ingeniería en máquinas secadoras de granos a Gas, Diesel, Biomasa, Resistencias eléctricas.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoBombeoagua.jpeg" alt="Bombeo de agua para refrigeración">
-                <h3>Bombeo de agua para refrigeración</h3>
-                <p>Realizamos mantenimiento a equipos de bombeo de agua para chiller.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoSecadoracacao.jpeg" alt="Secadora de Cacao">
-                <h3>Secadora de Cacao</h3>
-                <p>Brindamos soluciones a todo tipo de problema eléctrico en secadoras de cacao..</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoMaquinacorte.jpeg" alt="Máquinas de corte">
-                <h3>Máquinas de corte</h3>
-                <p>Brindamos mantenimiento a máquinas de corte industrial.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoHornopanaderia.jpeg" alt="Hornos de panadería">
-                <h3>Hornos de panadería</h3>
-                <p>Mantenimiento a hornos a GLP o Diesel de panaderías.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoQuemadordiesel.jpeg" alt="Quemador a Diesel">
-                <h3>Quemador a Diesel</h3>
-                <p>Mantenimiento de quemadores a Diesel y gas.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoHornoindustrial.jpeg" alt="Hornos industriales">
-                <h3>Hornos industriales</h3>
-                <p>Aislante térmico para hornos industriales.</p>
-            </div>
-            <div class="card">
-                <img loading="lazy" src="assets/images/proyectos/proyectoQuemadoresgas.jpeg" alt="Quemadores de gas">
-                <h3>Quemadores de gas</h3>
-                <p>Mantenimiento a sistema de distribución de gas de uso industrial.</p>
-            </div>
-            <!-- acá terminan los proyectos -->
         </div>
-    </div>
-</section>
+    </section>
 
-<div id="footer-site"></div>
+    <!-- PROCESO -->
+    <section class="dark">
+        <div class="wrap">
+            <span class="eyebrow" style="display:flex; justify-content:center;">Cómo trabajamos</span>
+            <h2 class="section-title">Nuestro proceso, paso a paso</h2>
+            <p class="section-lead">Una metodología clara para que sepas qué esperar en cada etapa del proyecto.</p>
 
-<script src="main.js?v=1.5"></script>
+            <div class="cards cols-4">
+                <div class="card numbered" data-step="01 / DIAGNÓSTICO">
+                    <h3>Levantamiento técnico</h3>
+                    <p>Visitamos el sitio, evaluamos requerimientos y revisamos planos o equipos existentes.</p>
+                </div>
+                <div class="card numbered" data-step="02 / DISEÑO">
+                    <h3>Proforma y diseño</h3>
+                    <p>Entregamos en menos de 24 horas una proforma técnica con alcance, materiales y plazos.</p>
+                </div>
+                <div class="card numbered" data-step="03 / EJECUCIÓN">
+                    <h3>Instalación o montaje</h3>
+                    <p>Ejecutamos el proyecto con personal calificado y siguiendo las normativas vigentes.</p>
+                </div>
+                <div class="card numbered" data-step="04 / SOPORTE">
+                    <h3>Soporte post-venta</h3>
+                    <p>Acompañamiento técnico, mantenimiento y respuesta ante cualquier eventualidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- PROYECTOS RECIENTES -->
+    <section class="cards-section">
+        <div class="wrap">
+            <span class="eyebrow on-light" style="display:flex; justify-content:center;">Casos de éxito</span>
+            <h2 class="section-title">Proyectos recientes</h2>
+            <p class="section-lead">Trabajos ejecutados en distintos sectores. Cada caso es un problema técnico resuelto.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoAnalisisdatosagd.jpeg" alt="Análisis de datos del AGD">
+                    <h3>Análisis de datos del AGD</h3>
+                    <p>Analizamos los resultados de gases disueltos en el aceite de los transformadores con técnicas avanzadas.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoCuartoinversores.jpeg" alt="Cuarto de inversores">
+                    <h3>Cuarto de inversores</h3>
+                    <p>Proyectos de generación fotovoltaica con instalación profesional de inversores y baterías.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoTablerosfuerza.jpeg" alt="Tableros de fuerza">
+                    <h3>Tableros de fuerza</h3>
+                    <p>Desarrollamos tableros de fuerza para el sector de energía y agroindustrial.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoTableroscontrol.jpeg" alt="Tableros de control">
+                    <h3>Tableros de control</h3>
+                    <p>Tableros de control industrial para aplicaciones a medida según necesidad del cliente.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoAplicacionesplc.jpeg" alt="Aplicaciones en PLC multimarca">
+                    <h3>Aplicaciones en PLC</h3>
+                    <p>Resolvemos problemas de fallas y programamos aplicaciones en PLC multimarca.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoSecadoragranos.jpeg" alt="Secadoras de granos">
+                    <h3>Secadoras de granos</h3>
+                    <p>Ingeniería para máquinas secadoras a gas, diesel, biomasa o resistencias eléctricas.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoBombeoagua.jpeg" alt="Bombeo de agua para refrigeración">
+                    <h3>Bombeo de agua para chiller</h3>
+                    <p>Mantenimiento integral a equipos de bombeo de agua para sistemas de refrigeración.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoSecadoracacao.jpeg" alt="Secadora de Cacao">
+                    <h3>Secadora de cacao</h3>
+                    <p>Soluciones a problemas eléctricos en secadoras de cacao del sector agroindustrial.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoMaquinacorte.jpeg" alt="Máquinas de corte">
+                    <h3>Máquinas de corte</h3>
+                    <p>Mantenimiento eléctrico y mecánico a máquinas de corte industrial.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoHornopanaderia.jpeg" alt="Hornos de panadería">
+                    <h3>Hornos de panadería</h3>
+                    <p>Mantenimiento a hornos a GLP o diesel del sector panadero.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoQuemadordiesel.jpeg" alt="Quemador a Diesel">
+                    <h3>Quemador a diesel</h3>
+                    <p>Mantenimiento de quemadores a diesel y gas para uso industrial.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoHornoindustrial.jpeg" alt="Hornos industriales">
+                    <h3>Hornos industriales</h3>
+                    <p>Recubrimiento y aislamiento térmico para hornos del sector industrial.</p>
+                </div>
+                <div class="card">
+                    <img loading="lazy" src="assets/images/proyectos/proyectoQuemadoresgas.jpeg" alt="Quemadores de gas">
+                    <h3>Quemadores de gas</h3>
+                    <p>Mantenimiento a sistemas de distribución de gas para uso industrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="wrap">
+            <div>
+                <h2>¿Tienes un proyecto en mente?</h2>
+                <p>Cuéntanos los detalles y te enviamos una proforma técnica en menos de 24 horas.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
+                </a>
+                <a href="contacto.html" class="btn btn-ghost">Contactarnos</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-site"></div>
+
+    <script src="main.js?v=2.1"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
